@@ -4,16 +4,20 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    flex-basis 780px;
     margin: 0;
     padding: 0;
-    justify-content: stretch;
 }
 
 .header, .footer {
     background-color: #1F2937;
+}
 
+.header, .content, .content.main, .footer {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 .header {
@@ -40,28 +44,48 @@ li {
 .content {
     background-color: white;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    align-content: stretch;
+    margin: 0;
+    padding: 0;
 }
 
 .main {
     background-color: #1F2937;
     color: #F9FAF8;
+    width: 100%;
+    margin: 0;
+    gap: 1em;
+}
+
+.main_content {
+    max-width: 800px;
     display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    flex: 1;
 }
 
 .main-left {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
+    flex-direction: column;
+    flex-basis: 300px;
 }
 
 .main_text {
+    display: flex;
+
+    flex-wrap: wrap;
     font-size: 48px;
     font-weight: extra-bold;
+}
+
+.main_subtext {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .button {
@@ -79,8 +103,11 @@ li {
 }
 
 .main_right{
+    background-color: grey;
+    width: 300px;
     display: flex;
     flex: 1;
+    justify-content: flex-end;
 }
 
 .info {
@@ -92,21 +119,33 @@ li {
 
 .info_content {
     display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.info_box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 150px;
+    gap: 1em;
 }
 
 .info_text {
     color: #1F2937;
-    font: 36px extra-bold;
+    font-size: 36px;
+    font-weight: 600;
     text-align: center;
+    padding: 1em;
 }
 
 .info_img {
     background-color: white;
     color: #3882F6;
-    width: 200px;
-    height: 200px;
-    border: 2px #3882F6;
-    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    border: 5px solid;
+    border-radius: 15px;
 }
 
 .info_subtext {
@@ -118,22 +157,26 @@ li {
 .quote {
     background-color: #E5E7EB;
     color: #1F2937;
-    flex-basis: 50%;
-    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
     flex: 1;
-    padding: 12em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6em;
 }
 
 .quote_text {
+    max-width: 790px;
     font-size: 36px;
     font-weight: 300;
     font-style: italic;
 }
 
 .quote_author {
+    width: 700px;
     font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
+    text-align: end;
 }
 
 .signup {
@@ -141,10 +184,9 @@ li {
     color: white;
     border-radius: 5px;
     display: flex;
-    flex-basis: 70%;
     flex: 1;
     justify-content: space-around;
-    margin: 6em;
+    margin: 3em;
     padding: 3em;
 }
 
@@ -162,5 +204,4 @@ li {
     align-items: center;
     justify-content: center;
     justify-items: flex-end;
-    padding: 1em;
 }
